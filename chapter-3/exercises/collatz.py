@@ -6,9 +6,13 @@ def collatz(number):
 
 while True:
     print("Enter number:")
-    number = input()
+    user_input = input()
+
+    if user_input.lower() == 'exit':
+        break
+    
     try:
-        number = int(number)
+        number = int(user_input)
         while number > 1:
           number = collatz(number)
           print(number)
