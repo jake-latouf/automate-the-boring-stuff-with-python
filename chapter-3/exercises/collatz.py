@@ -10,6 +10,7 @@ while True:
     try:
         number = int(number)
         while number > 1:
-          collatz(number)
+          number = collatz(number)
+          print(number)
     except ValueError:
         print("Please enter a valid integer.")
